@@ -15,7 +15,7 @@ while [ "$i" -le "$number" ]; do
 
 commandarray=()
 for n in ${folders[@]}; do
-	command="echo -n 'FOLDER'; echo $n && ls -lsah $n | tail -n5 &&"
+	command="echo -n 'FOLDER'; echo $n && ls -lsahrt $n | tail -n5 &&"
 	commandarray+=($command)
 	done
 
