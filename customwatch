@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# This is a very simple program. The function noargs is for when the 
+# user provides no arguments and, likewise, args is for when they do.
+# 
 function noargs {
 	# Figure out how many folders the user wants to check.
 	echo "How many folders, relative to this location, do you want to monitor?" 
@@ -41,6 +44,8 @@ function args {
 	lsstring=`echo ${commandarray[@]} | sed -e "s/&&$//"`
 	watch -n 1 "$lsstring"
 }
+
+# Begin the actual program
 
 if [ "$#" -ne 0 ]; then
 	# echo "$@"
